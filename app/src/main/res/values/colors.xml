@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#000</color>
+    <color name="primary_low">#000</color>
+    <color name="primary_dark">#000</color>
+    <color name="colorAccent">#E99C04</color>
+    <color name="white">#FFFFFF</color>
+    <color name="splashscreencolor">#E99C04</color>
+    <color name="disconnect">#E99C04</color>
+    <color name="connect">#6db41a</color>
+    <color name="textcolor">#ffffff</color>
+    <color name="btnround">#B2858585</color>
+    <color name="background">#000</color>
+    <color name="background_dark">#000</color>
+    <color name="colorAccentDark">#80b4ff</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreyLight">#9E9E9E</color>
+    <color name="colorGreyDark">#757575</color>
+    <color name="colorDark">#000000</color>
+    <color name="colorGreenDark">#43a047</color>
+    <color name="colorGreenLight">#98ee99</color>
+    <color name="colorIncognitoForeground">#cfcfcf</color>
+    <color name="colorIncognitoBackground">#373737</color>
+    <color name="shadowToolbarLight">#e0e0e0</color>
+    <color name="shadowToolbarDark">#424242</color>
+    <color name = "cp_0">#30E3CA</color>
+
+</resources>

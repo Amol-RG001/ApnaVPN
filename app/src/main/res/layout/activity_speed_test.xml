@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:id = "@+id/activity_main"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:background = "#000"
+    android:orientation = "vertical"
+    android:padding = "16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id = "@+id/ll_ping"
+            android:layout_width = "0dp"
+            android:layout_weight="1"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintBottom_toTopOf = "@+id/tv_start"
+            app:layout_constraintEnd_toStartOf = "@id/ll_download"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/tv_information"
+            app:layout_constraintWidth_percent = ".3">
+
+            <TextView
+                android:id = "@+id/tv_ping_label"
+                style = "@style/LabelTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text = "PING"
+                android:textColor = "#fff" />
+
+            <TextView
+                android:id = "@+id/tv_ping_value"
+                style = "@style/ValueTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+
+                android:text = ""
+                android:textColor = "@color/white" />
+
+            <TextView
+                style = "@style/UnitTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:alpha = ".5"
+                android:text = "MS"
+                android:textColor = "@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id = "@+id/ll_upload"
+            android:layout_width = "0dp"
+            android:layout_weight="1"
+
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintBottom_toTopOf = "@+id/tv_start"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toEndOf = "@+id/ll_download"
+            app:layout_constraintTop_toBottomOf = "@+id/tv_information"
+            app:layout_constraintWidth_percent = ".3">
+
+            <TextView
+                android:id = "@+id/tv_upload_label"
+                style = "@style/LabelTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text = "UPLOAD"
+                android:textColor = "#fff" />
+
+            <TextView
+                android:id = "@+id/tv_upload_value"
+                style = "@style/ValueTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:textColor = "@color/white" />
+
+            <TextView
+                android:id = "@+id/tv_upload_unit"
+                style = "@style/UnitTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:alpha = ".5"
+                android:text = "MBS"
+                android:textColor = "@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id = "@+id/ll_download"
+            android:layout_width = "0dp"
+            android:layout_weight="1"
+            android:layout_height = "wrap_content"
+            android:orientation = "vertical"
+            app:layout_constraintBottom_toTopOf = "@+id/tv_start"
+            app:layout_constraintEnd_toStartOf = "@id/ll_upload"
+            app:layout_constraintStart_toEndOf = "@+id/ll_ping"
+            app:layout_constraintTop_toBottomOf = "@+id/tv_information"
+            app:layout_constraintWidth_percent = ".3">
+
+            <TextView
+                android:id = "@+id/tv_download_label"
+                style = "@style/LabelTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text = "DOWNLOAD"
+                android:textColor = "#fff" />
+
+            <TextView
+                android:id = "@+id/tv_download_value"
+                style = "@style/ValueTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+
+                android:textColor = "@color/white" />
+
+            <TextView
+                android:id = "@+id/tv_download_unit"
+                style = "@style/UnitTextStyle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:alpha = ".5"
+                android:text = "MBS"
+                android:textColor = "@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id = "@+id/tv_information"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:alpha = ".5"
+        android:text = ""
+        android:layout_marginTop="15dp"
+
+        android:textAlignment = "center"
+        android:textColor = "@color/white"
+        app:layout_constraintBottom_toTopOf = "@id/ll_download"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@+id/cl_progresschart" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id = "@+id/cl_progresschart"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:backgroundTint="#000"
+        android:padding = "24dp"
+        app:layout_constraintDimensionRatio = "1:1"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintWidth_percent = ".95">
+
+        <View
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            app:layout_constraintBottom_toBottomOf = "@+id/tickProgressBar"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id = "@+id/linechart"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:layout_marginBottom = "40dp"
+            android:background = "@drawable/chart_background"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintHeight_percent = ".21"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintWidth_percent = ".45" />
+
+        <ImageView
+            android:id = "@+id/iv_download"
+            android:layout_width = "24dp"
+            android:layout_height = "24dp"
+            android:layout_marginStart = "24dp"
+            android:layout_marginLeft = "24dp"
+            android:src = "@drawable/ic_download"
+            android:tint = "#30E3CA"
+            app:layout_constraintBottom_toBottomOf = "@+id/tickProgressBar"
+            app:layout_constraintStart_toStartOf = "@+id/tickProgressBar"
+            app:layout_constraintTop_toTopOf = "@+id/tickProgressBar" />
+
+        <ImageView
+            android:id = "@+id/iv_upload"
+            android:layout_width = "24dp"
+            android:layout_height = "24dp"
+            android:layout_marginEnd = "24dp"
+            android:layout_marginRight = "24dp"
+            android:src = "@drawable/ic_upload"
+            android:tint = "#30E3CA"
+            app:layout_constraintBottom_toBottomOf = "@+id/tickProgressBar"
+            app:layout_constraintEnd_toEndOf = "@+id/tickProgressBar"
+            app:layout_constraintTop_toTopOf = "@+id/tickProgressBar" />
+
+        <com.apnagroup.apnavpn.utils.TickProgressBar
+            android:id = "@+id/tickProgressBar"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:progress = "90"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "1:1"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintWidth_percent = ".95"
+            app:tick_borderWidth = "8dp"
+            app:tick_centertext = "48sp"
+            app:tick_degree = "0"
+            app:tick_per_text = "24sp"
+            app:tick_progressColor = "#30E3CA"
+            app:tick_tickWidth = "1dp"
+            app:tick_unit = "MS"
+            app:tick_unprogresColor = "#fff" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id = "@+id/tv_start"
+        android:layout_width = "50dp"
+        android:layout_height = "50dp"
+        android:gravity = "center"
+        android:src = "@drawable/ic_play"
+        android:tint="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColor = "@color/white"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintWidth_percent = ".5" />
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<androidx.appcompat.widget.Toolbar xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:id = "@+id/toolbar"
+    android:layout_width = "match_parent"
+    android:layout_height = "56dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:layout_marginEnd = "16dp"
+        android:layout_marginRight = "16dp">
+
+        <ImageView
+            android:id = "@+id/appsetting"
+            android:layout_width = "24dp"
+            android:layout_height = "24dp"
+            android:src = "@drawable/ic_settings"
+            android:visibility = "gone"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+        <ImageView
+            android:id = "@+id/appshare"
+            android:layout_width = "24dp"
+            android:layout_height = "24dp"
+            android:padding = "2dp"
+            android:visibility = "gone"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent" />
+
+        <LinearLayout
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity = "center"
+            android:orientation = "vertical"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent">
+
+            <TextView
+                android:id = "@+id/toolbar_title"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text = "@string/app_name" />
+
+            <TextView
+                android:id = "@+id/toolbar_subtitle"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:text = "quick connect" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

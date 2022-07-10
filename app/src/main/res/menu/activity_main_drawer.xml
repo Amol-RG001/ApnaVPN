@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/browser"
+            android:icon="@drawable/ic_baseline_blur_circular_24"
+            android:title="Browser" />
+        <item
+            android:id="@+id/speedtest"
+            android:icon="@drawable/ic_download"
+            android:title="Speed Test" />
+        <item
+            android:id="@+id/bootact"
+            android:icon="@drawable/ic_boost_large_5"
+            android:title="Phone Booster" />
+
+        <item
+            android:id="@+id/nav_upgrade"
+            android:icon="@drawable/ic_premium_plan"
+            android:title="Servers" />
+        <item
+            android:id="@+id/nav_premium"
+            android:icon="@drawable/ic_premium_vip"
+            android:title="Premium Plan" />
+        <item
+            android:id="@+id/nav_helpus"
+            android:icon="@drawable/ic_baseline_privacy_tip_24"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/nav_rate"
+            android:icon="@drawable/ic_thumb_up_black"
+            android:title="Rate us" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Tell your friend" />
+    </group>
+
+</menu>
